@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Data.reservas.model.Reserva>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Incluir", "Incluir")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Quarto.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Chegada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Partida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorDiaria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TuristaId)
+        </th>
+
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quarto.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chegada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Partida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorDiaria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TuristaId)
+            </td>
+
+            <td>
+                @Html.ActionLink("Alterar", "Alterar", new { id = item.Id }) |
+                @Html.ActionLink("Detalhar", "Detalhar", new { id = item.Id }) |
+                @Html.ActionLink("Excluir", "Excluir", new { id = item.Id })
+                <!-- /Hotel/Excluir/1 -->
+            </td>
+        </tr>
+    }
+</table>

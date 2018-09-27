@@ -1,0 +1,60 @@
+﻿@model WebApplication1.Models.ReservaViewModel
+
+<div>
+    <h4>ReservaViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DataReserva)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataReserva)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TuristaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TuristaId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chegada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chegada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Partida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Partida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorDiaria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorDiaria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuartoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuartoId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
